@@ -1,3 +1,4 @@
+@use 'variaveis';
 @use 'hero';
 
 * {
@@ -5,24 +6,20 @@
     padding: 0;
     box-sizing: border-box;
 }
-$corDeFundo: #040714;
-$corTextoPrincipal: silver;
-$corDeTaxtoSecundario: #f9f9f9;
 
 body {
-    background-color: $corDeFundo;
+    background-color: variaveis.$corDeFundo;
 }
-
 
 @mixin text($fontSize: 16px) {
     font-size: $fontSize;
     line-height: $fontSize + 10px;
-    color: $corTextoPrincipal;
-} 
+    color: variaveis.$corTextoPrincipal;
+}
 
-@mixin text($fontSize: 40px) {
+@mixin title($fontSize: 40px) {
     @include text($fontSize);
-    color: $corDeTaxtoSecundario;
+    color: variaveis.$corTextoSecundario;
 }
 
 .text--big {
@@ -37,20 +34,20 @@ body {
     @include text(12px);
 }
 
-.title--big {
-    @include text(44px);
+.link-text {
+    @include text(18px);
+    color: variaveis.$corTextoSecundario;
+    text-decoration: underline;
 }
 
-.title {
-    @include text;
+.totle--big {
+    @include title(44px)
+}
+
+.totle {
+    @include title;
 }
 
 .title--small {
-    @include text(28px);
-}
-
-.link-text {
-    @include text(18px);
-    color: $corDeTaxtoSecundario;
-    text-decoration: underline;
+    @include title(28px)
 }
