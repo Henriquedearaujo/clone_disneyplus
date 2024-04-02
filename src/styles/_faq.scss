@@ -8,11 +8,6 @@
 
     li {
         margin-left: 42px;
-        margin-bottom: 1rem;
-    }
-
-    p {
-        margin-bottom: 1rem;
     }
 
     &__questions {
@@ -45,8 +40,13 @@
                 height: 0;
                 overflow: hidden;
                 padding-left: 24px;
-                transition: height, .3s ease;
+                transition: height, .5s ease;
+                
+                &__question {
+                    margin-bottom: 1rem;
+                }
             }
+
 
             &--is-open {
                 .faq__questions__item__question::after {
@@ -55,7 +55,7 @@
                 .faq__questions__item__answer {
                     height: auto;
                     padding-bottom: 24px;
-                    transition: height, .3s ease;
+                    transition: height, .5s ease;
                 }
             }
         }
