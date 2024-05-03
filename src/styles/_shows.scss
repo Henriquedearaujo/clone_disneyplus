@@ -11,6 +11,10 @@
         grid-template-columns: 1fr 1fr 1fr;
         gap: 24px;
 
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
         &--is-active {
             display: grid;
 
@@ -29,6 +33,12 @@
         display: flex;
         justify-content: center;
 
+        @media (max-height: 768px) {
+            white-space: nowrap;
+            overflow-x: scroll;
+            padding-left: 120px;
+        }
+
         &__button {
             color: variaveis.$corTextoSecundario;
             font-size: 20px;
@@ -41,7 +51,11 @@
             border-bottom: 5px solid transparent;
 
             &--is-active {
-                border-bottom: 5px solid variaveis.$corTextoSecundario;
+                border-bottom: variaveis.$corTextoSecundario;
+            }
+
+            @media (max-height: 768) {
+                font-size: 16px;
             }
         }
     }

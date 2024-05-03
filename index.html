@@ -9,11 +9,26 @@
 </head>
 
 <body>
+    <header class="header">
+        <div class="header__container">
+            <h1 class="hidden">
+                <img class="header__logo" src="./dist/images/disneyplus.svg" alt="Disney+">
+            </h1>
+            <ul class="header__links">
+                <li class="header__links__item">
+                    <a href="" class="button button--secodary">Assine agora</a>
+                </li>
+                <li class="header__links__item">
+                    <a href="" class="button button--dark">Entrar</a>
+                </li>
+            </ul>
+        </div>
+    </header>
     <section class="hero">
         <div class="hero__content">
-            <h1 class="hero__content__branding">
+            <div class="hero__content__branding">
                 <img src="./dist/images/disneyplus.svg" alt="Disney+">
-            </h1>
+            </div>
             <h3 class="title--small">
                 As melhores histórias em um só lugar.
             </h3>
@@ -31,9 +46,9 @@
                     <span class="text">R$ 45,90/mês*</span>
                 </li>
                 <li class="hero__content__combos__combo">
-                    <img src="./dist/images/logos/disney_star_plus.png" alt="Disney+ - Star+ - Combo+">
+                    <img src="./dist/images/logos/disney_star_plus_starzplay.png" alt="Disney+ - Star+ - Combo+">
                     <button class="button">Assine Agora</button>
-                    <span class="text">R$ 45,90/mês*</span>
+                    <span class="text">R$ 55,90/mês*</span>
                 </li>
             </ul>
             <p class="text--small">
@@ -158,7 +173,10 @@
         </div>
     </section>
     <section class="image-text-section image-text-section--image-full-width">
-        <img src="./dist/images/fundo_rei_leao.png" alt="Imagem com TV, Computador, Tablet e celular">
+        <picture>
+            <source media="(max-width: 768px)" srcset="./dist/images/fundo_rei_leao_celular.png"/>
+            <img src="./dist/images/fundo_rei_leao.png" alt="Rei Leão">
+        </picture>
         <div class="image-text-section__text_container image-text-section--image-full-width__text_container">
             <h2 class="title">Baixa filmes e séries</h2>
             <p class="text--big">
@@ -199,8 +217,7 @@
                     <li>PS4</li>
                     <li>PS5</li>
                     <li>Xbox One</li>
-                    <li>Xbox Serie X</li>
-                    <li>Xbox serie S</li>
+                    <li>Xbox Serie S/X</li>
                 </ul>
             </li>
             <li class="availabel-devices__list__item">
